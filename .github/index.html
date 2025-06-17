@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img align="right" src="profile image.png" alt="Your Photo" class="profile-img" />
+      <h1>Nishant Harikrishnan</h1>
+      <p class="tagline">IISER TVM • BSMS-24 </p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+             Passionate about science and driven by curiosity, I thrive on challenges that expand my knowledge and skills. With a strong love for learning, I constantly seek opportunities to explore new ideas and innovate, aiming to contribute meaningfully to the scientific community.
+    </p>
+    </section>
+<!--Initially shows 'Skills', After button click, shows 'Hobbies'-->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+      <h4>Programming</h4>
+        <li>Python</li>
+        <li>C/C++</li>
+      <h4>Video Editing</h4>
+        <li>DaVinci Resolve</li>
+      </ul>
+      <button onclick="doSomething1()">-Next-</button>
+    </section>
+
+    
+<!--To change text and to have a 'Back' button after changing text-->
+    <script>
+        function doSomething1(){
+            document.getElementById("skills").innerHTML = `<h2>Hobbies</h2>
+      <ul>
+        <li>Reading</li>
+        <li>Badminton</li>
+        <li>Running</li>
+      </ul>
+      <button onclick="doSomething2()">-Back-</button>`
+        }
+        function doSomething2(){
+            document.getElementById("skills").innerHTML = `<section id="skills">
+      <h2>Skills</h2>
+      <ul>
+      <h4>Programming</h4>
+        <li>Python</li>
+        <li>C/C++</li>
+      <h4>Video Editing</h4>
+        <li>DaVinci Resolve</li>
+      </ul>
+      <button onclick="doSomething1()">-Next-</button>
+    </section>`
+        }
+    </script>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: Nishant@example.com</p>
+      <p>Phone: 9876543210</p>
+    </section>
+  </div>
+</body>
+</html>
